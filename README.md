@@ -1,1 +1,141 @@
-# motos
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Tienda de Motos</title>
+
+<style>
+
+body{
+font-family: Arial;
+background:#111;
+color:white;
+text-align:center;
+}
+
+header{
+background:black;
+padding:20px;
+font-size:30px;
+}
+
+.container{
+display:flex;
+justify-content:center;
+gap:30px;
+margin-top:40px;
+}
+
+.moto{
+background:#222;
+padding:20px;
+border-radius:10px;
+width:250px;
+}
+
+.moto img{
+width:100%;
+border-radius:10px;
+}
+
+button{
+background:red;
+color:white;
+border:none;
+padding:10px;
+margin-top:10px;
+cursor:pointer;
+border-radius:5px;
+}
+
+button:hover{
+background:darkred;
+}
+
+.formulario{
+margin-top:40px;
+background:#222;
+padding:20px;
+width:300px;
+margin-left:auto;
+margin-right:auto;
+border-radius:10px;
+}
+
+input, select{
+width:90%;
+padding:8px;
+margin:5px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+🏍️ Tienda de Motos
+</header>
+
+<div class="container">
+
+<div class="moto">
+<h3>Yamaha R1</h3>
+<img src="https://cdn.pixabay.com/photo/2018/05/07/15/17/motorcycle-3381247_1280.jpg">
+<p>$15000</p>
+<button onclick="comprar('Yamaha R1')">Comprar</button>
+</div>
+
+<div class="moto">
+<h3>Yamaha R6</h3>
+<img src="https://cdn.pixabay.com/photo/2016/03/27/19/40/motorcycle-1284419_1280.jpg">
+<p>$12000</p>
+<button onclick="comprar('Yamaha R6')">Comprar</button>
+</div>
+
+<div class="moto">
+<h3>MT-07</h3>
+<img src="https://cdn.pixabay.com/photo/2017/01/06/19/15/motorcycle-1957037_1280.jpg">
+<p>$9500</p>
+<button onclick="comprar('MT-07')">Comprar</button>
+</div>
+
+</div>
+
+<div class="formulario">
+
+<h2>Formulario de Pago</h2>
+
+<p id="motoSeleccionada"></p>
+
+<input type="text" placeholder="Nombre">
+
+<input type="text" placeholder="Dirección">
+
+<select>
+<option>Tarjeta de crédito</option>
+<option>Tarjeta de débito</option>
+<option>Transferencia bancaria</option>
+<option>Pago contra entrega</option>
+</select>
+
+<button onclick="pagar()">Pagar</button>
+
+</div>
+
+<script>
+
+function comprar(moto){
+document.getElementById("motoSeleccionada").innerText =
+"Estás comprando: " + moto
+}
+
+function pagar(){
+alert("Pago procesado correctamente 🚀")
+}
+
+</script>
+
+</body>
+</html>
